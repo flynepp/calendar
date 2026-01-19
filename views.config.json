@@ -1,0 +1,332 @@
+{
+    "views": {
+        "personal-day": {
+            "name": "个人日视图",
+            "description": "纵轴 = 小时，横轴 = 一天（单列）",
+            "xAxis": {
+                "type": "single-day",
+                "domain": [
+                    0,
+                    1
+                ],
+                "range": [
+                    0.10,
+                    0.95
+                ],
+                "label": "今天",
+                "grid": false
+            },
+            "yAxis": {
+                "type": "time-hours",
+                "domain": [
+                    0,
+                    24
+                ],
+                "range": [
+                    0.05,
+                    0.90
+                ],
+                "label": "小时",
+                "grid": true,
+                "gridInterval": 1
+            },
+            "layout": {
+                "type": "vertical-stack",
+                "minEventHeight": 20,
+                "maxLayers": 5,
+                "overlapStrategy": "stack"
+            }
+        },
+        "personal-week": {
+            "name": "个人周视图",
+            "description": "纵轴 = 小时，横轴 = 天",
+            "xAxis": {
+                "type": "days-of-week",
+                "domain": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                ],
+                "range": [
+                    0.05,
+                    0.95
+                ],
+                "label": "星期",
+                "grid": true
+            },
+            "yAxis": {
+                "type": "time-hours",
+                "domain": [
+                    0,
+                    24
+                ],
+                "range": [
+                    0.05,
+                    0.90
+                ],
+                "label": "小时",
+                "grid": true,
+                "gridInterval": 1
+            },
+            "layout": {
+                "type": "grid",
+                "minEventHeight": 20,
+                "maxLayers": 3,
+                "overlapStrategy": "stack"
+            }
+        },
+        "personal-month": {
+            "name": "个人月视图",
+            "description": "纵轴 = 拼接天，横轴 = 星期",
+            "xAxis": {
+                "type": "days-of-week",
+                "domain": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat",
+                    "Sun"
+                ],
+                "range": [
+                    0,
+                    100
+                ],
+                "label": "星期",
+                "grid": true
+            },
+            "yAxis": {
+                "type": "weeks-of-month",
+                "domain": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "range": [
+                    0,
+                    100
+                ],
+                "label": "周",
+                "grid": true
+            },
+            "layout": {
+                "type": "calendar-grid",
+                "minEventHeight": 30,
+                "maxLayers": 2,
+                "overlapStrategy": "hide"
+            }
+        },
+        "group-day": {
+            "name": "组日视图",
+            "description": "纵轴 = 用户，横轴 = 小时",
+            "xAxis": {
+                "type": "time-hours",
+                "domain": [
+                    0,
+                    24
+                ],
+                "range": [
+                    0.08,
+                    0.95
+                ],
+                "label": "小时",
+                "grid": true,
+                "gridInterval": 2
+            },
+            "yAxis": {
+                "type": "users",
+                "domain": [
+                    "user1",
+                    "user2",
+                    "user3",
+                    "user4"
+                ],
+                "range": [
+                    0.08,
+                    0.92
+                ],
+                "label": "用户",
+                "grid": true
+            },
+            "layout": {
+                "type": "horizontal-stack",
+                "minEventHeight": 30,
+                "maxLayers": 1,
+                "overlapStrategy": "stack"
+            }
+        },
+        "group-week": {
+            "name": "组周视图",
+            "description": "纵轴 = 用户，横轴 = 天",
+            "xAxis": {
+                "type": "days-of-week",
+                "domain": [
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri"
+                ],
+                "range": [
+                    0.08,
+                    0.95
+                ],
+                "label": "星期",
+                "grid": true
+            },
+            "yAxis": {
+                "type": "users",
+                "domain": [
+                    "user1",
+                    "user2",
+                    "user3",
+                    "user4",
+                    "user5"
+                ],
+                "range": [
+                    0.08,
+                    0.92
+                ],
+                "label": "用户",
+                "grid": true
+            },
+            "layout": {
+                "type": "grid",
+                "minEventHeight": 25,
+                "maxLayers": 2,
+                "overlapStrategy": "stack"
+            }
+        }
+    },
+    "defaultView": "personal-day",
+    "users": [
+        {
+            "id": "user1",
+            "name": "张三",
+            "color": "#007AFF"
+        },
+        {
+            "id": "user2",
+            "name": "李四",
+            "color": "#34C759"
+        },
+        {
+            "id": "user3",
+            "name": "王五",
+            "color": "#FF9500"
+        },
+        {
+            "id": "user4",
+            "name": "赵六",
+            "color": "#AF52DE"
+        },
+        {
+            "id": "user5",
+            "name": "钱七",
+            "color": "#FF3B30"
+        }
+    ],
+    "timeRange": {
+        "startHour": 8,
+        "endHour": 20,
+        "workingHours": true
+    },
+    "styles": {
+        "gridColor": "#e0e0e0",
+        "gridWidth": 1,
+        "labelColor": "#666666",
+        "labelFontSize": 12,
+        "eventRadius": 6,
+        "eventShadow": "0 2px 6px rgba(0,0,0,0.2)"
+    },
+    "theme": {
+        "colors": {
+            "primary": "#1a73e8",
+            "primaryHover": "#1557b0",
+            "primaryActive": "#0d47a1",
+            "background": "#ffffff",
+            "backgroundSecondary": "#f5f5f5",
+            "textPrimary": "#333333",
+            "textSecondary": "#666666",
+            "border": "#e0e0e0",
+            "eventDefault": "#4285f4",
+            "eventSelected": "#1a73e8",
+            "eventHover": "#5a95f5"
+        },
+        "typography": {
+            "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+            "fontSize": {
+                "xs": 10,
+                "sm": 11,
+                "base": 12,
+                "md": 13,
+                "lg": 14,
+                "xl": 16,
+                "xxl": 20
+            }
+        },
+        "dimensions": {
+            "spacing": {
+                "xs": 4,
+                "sm": 8,
+                "md": 12,
+                "lg": 16
+            },
+            "borderRadius": {
+                "sm": 2,
+                "md": 4,
+                "lg": 6
+            }
+        }
+    },
+    "ui": {
+        "title": {
+            "text": "Canvas Calendar Engine",
+            "fontSize": 20,
+            "color": "#333333",
+            "offsetX": 12,
+            "offsetY": 10
+        },
+        "buttons": {
+            "width": 90,
+            "height": 32,
+            "gap": 8,
+            "fontSize": 13,
+            "views": [
+                { "id": "personal-day", "label": "个人日" },
+                { "id": "personal-week", "label": "个人周" },
+                { "id": "personal-month", "label": "个人月" },
+                { "id": "group-day", "label": "组日" },
+                { "id": "group-week", "label": "组周" }
+            ]
+        }
+    },
+    "layout": {
+        "direction": "vertical",
+        "gap": 0,
+        "regions": [
+            {
+                "id": "header",
+                "type": "fixed",
+                "sizeMode": "original",
+                "fixedHeight": 60,
+                "padding": { "top": 10, "right": 20, "bottom": 10, "left": 20 }
+            },
+            {
+                "id": "calendar",
+                "type": "flex",
+                "sizeMode": "scale",
+                "flexGrow": 1,
+                "padding": { "top": 10, "right": 10, "bottom": 10, "left": 10 }
+            }
+        ]
+    }
+}
