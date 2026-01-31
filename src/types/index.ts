@@ -2,16 +2,8 @@ export interface Event {
   id: string
   startTime: number // timestamp
   endTime: number   // timestamp
-  userId?: string
-  layer?: number
-  crossDay?: boolean
-  metadata?: {
-    title?: string
-    color?: string
-    tags?: string[]
-    description?: string
-    userColor?: string
-  }
+  allDay: boolean
+  metadata?: any
 }
 
 // 视图配置接口
